@@ -35,15 +35,18 @@ history : To know history :
  in this lab we'll dive into the synthesis process for the specific design, picorv32a, utilizing the OpenLane flow. Our objective is to generate the netlist and other essential reports following the synthesis step. Before proceeding, it's very important to ensure the smooth operation of the virtual machine environment of ubuntu or any other linux os. Once everything is confirmed to be functioning optimally, as installed required openlane packages into your terminal, we'll observe a terminal interface within the virtual machine environment, resembling the following: 
 
  ![flow_tcl_interactive](https://github.com/kirantime/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/assets/158084817/092814ef-bbb2-49d4-81cc-c1ad3be5901c)
-# Invoke docker: to start the docker container. that allows you to build, test, and deploy applications quickly.
+ Invoke docker: to start the docker container. that allows you to build, test, and deploy applications quickly.
 
--When we run the docker command invoke the openlane tool, the terminal will look like above img
-So, let's navigate to the directory path: $cd Desktop/work/tools/openlane_working_dir/openlane. This the openlane pwd, it is essential for executing the synthesis steps effectively. After gone to pwd, we will run a docker command. Docker is like a magic box that bundles up all the stuff needed to run a program or input all the packages required to run the flow., like OpenLane for chip design, ensuring everything works the same no matter where you run it. but here we running in the above path for our convenience.
+When we run the docker command invoke the openlane tool, the terminal will look like above img
+So, let's navigate to the directory   path: $cd Desktop/work/tools/openlane_working_dir/openlane. This is the openlane pwd, it is essential for executing the synthesis steps effectively. After gone to pwd, we will run a docker command. Docker is like a magic box that bundles up all the stuff needed to run a program or input all the packages required to run the flow., like OpenLane for chip design, ensuring everything works the same no matter where you run it. but here we running in the above path for our convenience.
   
 
-  when we are entering in the OpenLANE, we have to use ./flow.tcl because as a name says it goes with the flow using the script. using this -Interactive switch for the step by step implemented in the process, otherwise it will run complete flow as translated from "RTL to GDSII". by using command #  ./flow.tcl -interactive  switch. That means, OpenLANE is now open and we can also see that the prompt will change now.
+when we are entering in the OpenLANE, we have to use ./flow.tcl because as a name says it goes with the flow using the script. using this -Interactive switch for the step by step implemented in the process, otherwise it will run complete flow as translated from "RTL to GDSII". by using command #  ./flow.tcl -interactive  switch. That means, OpenLANE is now open and we can also see that the prompt will change now.
   after that, the prompt will appear like % symbol, next we required to import all the packages to run this flow so that procees need to be done like every time "%package require openlane 0.9" 
   right now we ready to execute the command 
-  Now, if we go into the design folder in openlane, there are nearly 30-40 designs are already built. Out of them, we can open any of the designs. here we are opening the picorv32a.v design. In this design folder, we can see many files are available. i.e., src[.v+_sdcfile], config.tcl[default switch info], etc. This config.tlc file contains every detail specific to the design. for example, details about enrollment, clock period, clock period port, etc.
+  Now, in openlane, we are going to run the synthesis, but before synthesis, we have to prepare design setup stage. for that command is  prep -design picorv32a
+  ![prep comple of picorv32a](https://github.com/kirantime/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/assets/158084817/9479a4fc-9fd4-4e92-9d5d-908a11be5be6)
+
+Now, if we go into the design folder in openlane, there are nearly 30-40 designs are already built. Out of them, we can open any of the designs. here we are opening the picorv32a.v design. In this design folder, we can see many files are available. i.e., src[.v+_sdcfile], config.tcl[default switch info], etc. This config.tlc file contains every detail specific to the design. for example, details about enrollment, clock period, clock period port, etc.
   
   
