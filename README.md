@@ -18,7 +18,7 @@ man command : man -f or -k [option]
 
 clear : clears present terminal screen
 
-To know history : history
+history : To know history : 
   
   # introduction
   
