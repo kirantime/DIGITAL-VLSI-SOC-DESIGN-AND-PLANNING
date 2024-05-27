@@ -44,8 +44,11 @@ So, let's navigate to the directory   path: $cd Desktop/work/tools/openlane_work
 when we are entering in the OpenLANE, we have to use ./flow.tcl because as a name says it goes with the flow using the script. using this -Interactive switch for the step by step implemented in the process, otherwise it will run complete flow as translated from "RTL to GDSII". by using command #  ./flow.tcl -interactive  switch. That means, OpenLANE is now open and we can also see that the prompt will change now.
   after that, the prompt will appear like % symbol, next we required to import all the packages to run this flow so that procees need to be done like every time "%package require openlane 0.9" 
   right now we ready to execute the command 
+ 
   Now, in openlane, we are going to run the synthesis, but before synthesis, we have to prepare design setup stage. for that command is  prep -design picorv32a
-  ![prep comple of picorv32a](https://github.com/kirantime/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/assets/158084817/9479a4fc-9fd4-4e92-9d5d-908a11be5be6)
+  ![Screenshot 2024-05-25 133920](https://github.com/kirantime/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/assets/158084817/15aab6a9-5889-4fb6-99bf-1a22b03d31be)
+  here we can see the preparation completed by following {src and config.tcl} in the picorv32a file the run directory has been created with today's date. It contains the necessary folders for OpenLane. The temp file has the merged.lef file, which holds wire, layer, and cell level information. $cd 
+  Desktop/work/tools/openlane_working_dir/openlane/design/picorv32a/ explore whether this file contains, you will identify some changes after the synthesis completed
 
 Now, if we go into the design folder in openlane, there are nearly 30-40 designs are already built. Out of them, we can open any of the designs. here we are opening the picorv32a.v design. In this design folder, we can see many files are available. i.e., src[.v+_sdcfile], config.tcl[default switch info], etc. This config.tlc file contains every detail specific to the design. for example, details about enrollment, clock period, clock period port, etc.
   
