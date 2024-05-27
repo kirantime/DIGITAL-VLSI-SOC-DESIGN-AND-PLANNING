@@ -1,5 +1,5 @@
 # DIGITAL VLSI SOC DESIGN AND PLANNING
-DAY 1
+#DAY 1 : Design Preparation :
 # OpenLANE Directory structure in detail
   
   # Basic Linux Commands
