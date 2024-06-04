@@ -47,9 +47,25 @@ when we are entering in the OpenLANE, we have to use ./flow.tcl because as a nam
  
   Now, in openlane, we are going to run the synthesis, but before synthesis, we have to prepare design setup stage. for that command is  prep -design picorv32a
   ![Screenshot 2024-05-25 133920](https://github.com/kirantime/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/assets/158084817/15aab6a9-5889-4fb6-99bf-1a22b03d31be)
+
+  ![view created runs as date all emty exp tmp file](https://github.com/kirantime/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/assets/158084817/abdd2512-1bfd-496e-801c-9a7e5ca0f208)
+
   here we can see the preparation completed by following {src and config.tcl} in the picorv32a file the run directory has been created with today's date. It contains the necessary folders for OpenLane. The temp file has the merged.lef file, which holds wire, layer, and cell level information. $cd 
   Desktop/work/tools/openlane_working_dir/openlane/design/picorv32a/ explore whether this file contains, you will identify some changes after the synthesis completed
 
 Now, if we go into the design folder in openlane, there are nearly 30-40 designs are already built. Out of them, we can open any of the designs. here we are opening the picorv32a.v design. In this design folder, we can see many files are available. i.e., src[.v+_sdcfile], config.tcl[default switch info], etc. This config.tlc file contains every detail specific to the design. for example, details about enrollment, clock period, clock period port, etc.
   
   
+![runsynthes successfl](https://github.com/kirantime/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/assets/158084817/847b8816-e47d-453b-ba8b-ddd47b2ef299)
+
+Now there is also a config.tcl file available in addition to the design folder. This config.tcl file contains all the default parameters used by the run.
+
+When we make changes to the original configuration and then run it, for example, if we modify the core utilization in the floorplanning and then run the floorplanning, at this point in the config.tcl file, the core utilization will change. By cross-checking it, we can verify if the modification is reflected in the execution or not.
+
+Now moving to openlane, we are going to run the synthesis. The command run_synthesis after the preparation is completed successfully
+It will take a few minutes to complete the synthesis.
+
+![runsynthes successfl](https://github.com/kirantime/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/assets/158084817/35a50516-1b69-4ad8-9e71-f3392aeb811e)
+
+
+
