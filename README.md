@@ -1,36 +1,31 @@
 # DIGITAL VLSI SOC DESIGN AND PLANNING
-#DAY 1 : Design Preparation :
-# OpenLANE Directory structure in detail
+## DAY 1 : Design Preparation :
+ 
+ ## OpenLANE Directory structure in detail
   
-  # Basic Linux Commands
+  ## Basic Linux Commands
 
 cd : opens the particular folder
 
 ls or ls -ltr : lists the content of the folder with permission 
-
 pwd : shows the present working directory or its path 
-
 mkdir : to make a new directory
-
 command --help : if need any help use 
-
 man command : man -f or -k [option]
-
 clear : clears present terminal screen
-
 history : To know history : 
   
   # introduction
   
-  # what is openlane :
+  ## what is openlane :
   
   OpenLane is a cutting-edge platform for silicon implementation that utilizes open source technologies for chip development. It encompasses various RTL designs and open-sourced EDA Tools. The missing component in the complete open source chip development was provided by the SKY130 PDK from Skywater Technologies and Google. Several EDA Tools played specific roles in the design cycle, but there was a lack of a clean design flow, and the Skywater PDKs were only compatible with industry tools. OpenLane addressed these issues by offering a completely automated RTL to GDSII flow. OpenLane is not just a tool, but a comprehensive flow that incorporates numerous EDA tools, such as Yosys for synthesis, OpenSTA for STA analysis, and automation scripts, all tailored to work seamlessly with the Skywater PDKs and open-source EDA tools.
   
-# SkyWater sky130 Open Source PDK :
+## SkyWater sky130 Open Source PDK :
 
  Open Source PDK is a collaboration between Google and SkyWater Technology Foundry to provide a fully open-source Process Design Kit and related resources. This kit can be used to create manufacturable designs at SkyWater’s facility. We are currently working on the sky130A_sky130_fd_sc_hd_config is skywater130nm PDK variant. In this context, "sky130" refers to the process name or node technology, "fd" represents the foundry name (SkyWater foundry), "sc" denotes standard cell library files, and "hd" stands for high density, is one type of variant.
  
- # Design Preparation Step :
+ ## Design Preparation Step :
 
  in this lab we'll dive into the synthesis process for the specific design, picorv32a, utilizing the OpenLane flow. Our objective is to generate the netlist and other essential reports following the synthesis step. Before proceeding, it's very important to ensure the smooth operation of the virtual machine environment of ubuntu or any other linux os. Once everything is confirmed to be functioning optimally, as installed required openlane packages into your terminal, we'll observe a terminal interface within the virtual machine environment, resembling the following: 
 
@@ -66,6 +61,17 @@ Now moving to openlane, we are going to run the synthesis. The command run_synth
 It will take a few minutes to complete the synthesis.
 
 ![runsynthes successfl](https://github.com/kirantime/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/assets/158084817/35a50516-1b69-4ad8-9e71-f3392aeb811e)
+## To synthesize the design:
+Yosys performs RTL synthesis
+ABC performs technology mapping
+OpenSTA performs static timing analysis on the resulting netlist to generate timing reports
+
+# Day1 assignment to find flip flops ratio: 
+ During synthesis, the total number of D flip-flops is 1613, and the number of cells is 14876. The flop ratio, calculated as the number of flip flops divided by the total number of cells, flops ratio is 0.10842, and in percentage is 10.84%.
+
+after that run_synthesis you will see that in the run directory another folder created as date format directory folder of picorv32a
+
+![Screenshot 2024-05-25 160134](https://github.com/kirantime/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/assets/158084817/837f2cec-dd6c-4d28-9bfe-20d9d10314be)
 
 
 
