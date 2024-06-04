@@ -73,5 +73,14 @@ after that run_synthesis you will see that in the run directory another folder c
 
 ![Screenshot 2024-05-25 160134](https://github.com/kirantime/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/assets/158084817/837f2cec-dd6c-4d28-9bfe-20d9d10314be)
 
+![Screenshot 2024-05-25 161819](https://github.com/kirantime/DIGITAL-VLSI-SOC-DESIGN-AND-PLANNING/assets/158084817/29713def-5493-47d5-9102-1fe38d4612bc)
+
+Before running, we noticed that the result folder was empty. However, after completing the synthesis, we observed that all the mapping had been performed by ABC. The synthesis report shows the exact time when the synthesis was completed, and the statistical synthesis report is displayed below, matching what we had seen previously
+
+# Day 2 floorplanning :  
+ ## steps to run floorplan using openlane :
+ 
+ 
+
 
 
